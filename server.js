@@ -1,6 +1,9 @@
 //엄격한 코드 검사
 'use strict';
 
+
+
+
 /************* include library **************/
 var express             = require('express');
 var path                = require('path');

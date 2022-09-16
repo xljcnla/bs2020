@@ -3,7 +3,6 @@
 
 
 
-
 /************* include library **************/
 var express             = require('express');
 var path                = require('path');
@@ -35,7 +34,9 @@ server.get('/study', (req, res, next) => {
 
     let student = {
         id : 0,
-        name : "손님"
+        name : "손님",
+        age : '10'
+        
     }
 
     if(req.query.id !== null && req.query.id !== undefined){
@@ -43,6 +44,9 @@ server.get('/study', (req, res, next) => {
     }
     if(req.query.name !== null && req.query.name !== undefined){
         student.name = req.query.name;
+    }
+    if(req.query.age !== null && req.query.age !== undefined){
+        student.age = req.query.age;
     }
   
     console.log(student);
